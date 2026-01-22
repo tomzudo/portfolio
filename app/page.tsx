@@ -1,65 +1,178 @@
-import Image from "next/image";
+import { projects } from "./data/projects";
+import { ProjectCard } from "./components/ProjectCard";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="flex flex-col">
+
+      {/* ================= HERO ================= */}
+      <section className="bg-portfolio-surface px-6 py-32">
+        <div className="max-w-6xl mx-auto flex justify-center">
+          <div
+            className="
+              w-full max-w-md
+              rounded-3xl
+              bg-white/5
+              backdrop-blur-md
+              border border-white/5
+              shadow-xl shadow-black/20
+              p-12
+              flex flex-col items-center gap-6
+              text-center
+              text-portfolio-textLight
+              transition-all duration-300
+            "
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+            <img
+              src="https://avatars.githubusercontent.com/u/208907254?s=400"
+              alt="Tom"
+              className="w-32 h-32 rounded-full object-cover border border-portfolio-accent"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+            <h1 className="text-3xl font-bold">Tom</h1>
+
+            <p className="text-portfolio-grayish leading-relaxed">
+              Desenvolvedor focado em criar aplicações web modernas,
+              com atenção à organização e qualidade do código.
+            </p>
+
+            <div className="flex gap-4 pt-4">
+              <a
+                href="https://github.com/seu-usuario"
+                target="_blank"
+                className="
+                  px-6 py-3 rounded-xl
+                  bg-portfolio-accent
+                  text-portfolio-textLight
+                  font-semibold
+                  hover:opacity-90
+                  transition
+                "
+              >
+                GitHub
+              </a>
+
+              <a
+                href="#about"
+                className="
+                  px-6 py-3 rounded-xl
+                  border border-white/30
+                  text-white
+                  hover:bg-white/10
+                  transition
+                "
+              >
+                Sobre
+              </a>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* ================= ABOUT ================= */}
+      <section
+        id="about"
+        className="bg-portfolio-background px-6 py-10"
+      >
+        <div className="max-w-6xl mx-auto">
+
+          <h2 className="text-3xl font-bold text-portfolio-surface mb-16">
+            Sobre mim
+          </h2>
+
+          <div className="flex items-center gap-10">
+
+            {/* FOTO */}
+            <div className="shrink-0">
+              <img
+                src="https://avatars.githubusercontent.com/u/208907254?s=400"
+                alt="Tom"
+                className="
+                  w-20 h-20
+                  rounded-full
+                  object-cover
+                  shadow-lg
+                "
+              />
+            </div>
+
+            {/* CAIXA PADRONIZADA COM PROJETOS */}
+            <div
+              className="
+                relative
+                bg-portfolio-surface
+                rounded-2xl
+                p-8
+                flex flex-col gap-6
+                border border-white/10
+                shadow-lg shadow-black/30
+                hover:-translate-y-1 hover:shadow-xl
+                transition-all duration-300
+              "
+            >
+              {/* SETA LATERAL */}
+              <span
+                className="
+                  absolute
+                  -left-3
+                  top-10
+                  w-6 h-6
+                  bg-portfolio-surface
+                  rotate-45
+                  shadow-lg
+                "
+              />
+
+              <p className="text-portfolio-grayish leading-relaxed">
+                Apaixonado por tecnologia, ingressei na área de desenvolvimento em 2023.
+                Atualmente, curso Análise e Desenvolvimento de Sistemas (ADS) e atuo como
+                estagiário em Backend, aprimorando minhas habilidades tanto para o crescimento
+                profissional quanto pessoal.
+              </p>
+
+              <p className="text-portfolio-grayish leading-relaxed">
+                Estou sempre em busca de oferecer e proporcionar as melhores experiências
+                em meus projetos e serviços.
+              </p>
+
+              {/* STACK */}
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= PROJECTS ================= */}
+      <section
+        id="projetos"
+        className="bg-portfolio-background px-6 py-16"
+      >
+        <div className="max-w-6xl mx-auto flex flex-col gap-12">
+          <h2 className="text-3xl font-bold text-portfolio-surface">
+            Projetos
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                github={project.github}
+                live={project.live}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= FOOTER ================= */}
+      <footer className="bg-portfolio-surface py-6 text-center">
+        <p className="text-sm text-portfolio-grayish">
+          Desenvolvido por Erivelton Araújo
+        </p>
+      </footer>
+
+    </main>
   );
 }
