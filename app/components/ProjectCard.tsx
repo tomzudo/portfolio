@@ -12,20 +12,22 @@ export function ProjectCard({
   live,
 }: ProjectCardProps) {
   return (
-    <div className="
-      bg-portfolio-surface
-      backdrop-blur-md
-      rounded-2xl
-      p-6
-      flex flex-col
-      gap-4
-      border border-white/10
-      shadow-lg shadow-black/20
-      hover:translate-y-[-2px]
-      hover:shadow-xl
-      transition-all duration-300
-      text-portfolio-textLight
-    ">
+    <div
+      className="
+        bg-portfolio-card
+        backdrop-blur-md
+        rounded-2xl
+        p-6
+        flex flex-col
+        gap-4
+        border border-white/10
+        shadow-lg shadow-black/20
+        hover:-translate-y-1
+        hover:shadow-xl
+        transition-all duration-300
+        text-portfolio-textLight
+      "
+    >
       <h3 className="text-xl font-semibold">
         {title}
       </h3>
@@ -56,9 +58,10 @@ export function ProjectCard({
             target="_blank"
             className="
               px-4 py-2 rounded-lg
-              border border-white/30
+              bg-portfolio-accent
               text-white
-              hover:bg-white/10
+              font-medium
+              hover:opacity-90
               transition
             "
           >

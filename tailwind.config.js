@@ -11,12 +11,14 @@ module.exports = {
       },
       colors: {
         portfolio: {
-          background: "#ecece0ff",
-          surface: "#203d4f",
+          background: "#ecece0ff", // fundo geral claro
+          hero: "#203d4f",         // HERO / área da foto
+          surface: "#000000",      // caixas neutras (about, footer)
+          card: "#e8efe19",         // cards de projetos (independente)
           accent: "#7a8484",
-          textLight: "#FFFFFF",
-          textDark: "#353535",
-          grayish: "#D9D9D9",
+          textLight: "#000000",
+          textDark: "#ffffff",
+          grayish: "#000000",
         },
       },
     },

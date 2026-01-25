@@ -6,7 +6,7 @@ export default function Home() {
     <main className="flex flex-col">
 
       {/* ================= HERO ================= */}
-      <section className="bg-portfolio-surface px-6 py-32">
+      <section className="bg-portfolio-hero px-6 py-32">
         <div className="max-w-6xl mx-auto flex justify-center">
           <div
             className="
@@ -29,11 +29,11 @@ export default function Home() {
               className="w-32 h-32 rounded-full object-cover border border-portfolio-accent"
             />
 
-            <h1 className="text-3xl font-bold">Tom</h1>
+            <h1 className="text-3xl font-bold text-white">Tom</h1>
 
-            <p className="text-portfolio-grayish leading-relaxed">
+            <p className="text-white/80 leading-relaxed">
               Desenvolvedor focado em criar aplicações web modernas,
-              com atenção à organização e qualidade do código.
+              com atenção à desorganizacao e uga buga do uga buga do código.
             </p>
 
             <div className="flex gap-4 pt-4">
@@ -42,7 +42,7 @@ export default function Home() {
                 target="_blank"
                 className="
                   px-6 py-3 rounded-xl
-                  bg-portfolio-accent
+                  bg-white/85
                   text-portfolio-textLight
                   font-semibold
                   hover:opacity-90
@@ -56,9 +56,9 @@ export default function Home() {
                 href="#about"
                 className="
                   px-6 py-3 rounded-xl
-                  border border-white/30
+                  border border-white/20
                   text-white
-                  hover:bg-white/10
+                  hover:bg-white/5
                   transition
                 "
               >
@@ -100,7 +100,7 @@ export default function Home() {
             <div
               className="
                 relative
-                bg-portfolio-surface
+                bg-white/70
                 rounded-2xl
                 p-8
                 flex flex-col gap-6
@@ -117,7 +117,7 @@ export default function Home() {
                   -left-3
                   top-10
                   w-6 h-6
-                  bg-portfolio-surface
+                  bg-white/40
                   rotate-45
                   shadow-lg
                 "
@@ -166,10 +166,11 @@ export default function Home() {
         </div>
       </section>
 
+            
       {/* ================= FOOTER ================= */}
-      <footer className="bg-portfolio-surface py-6 text-center">
-        <p className="text-sm text-portfolio-grayish">
-          Desenvolvido por Erivelton Araújo
+      <footer className="bg-portfolio-hero py-6 text-center">
+        <p className="text-sm text-white/60">
+          2026 ©Desenvolvido por Erivelton Araújo
         </p>
       </footer>
 

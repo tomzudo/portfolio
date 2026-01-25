@@ -4,7 +4,7 @@ export const projects = [
     description:
       "Aplicação em Java com operações bancárias, uso de POO, DAO e persistência em SQLite.",
     image: "/projects/banco.png",
-    github: "https://github.com/tomzudo",
+    github: "https://github.com/tomzudo/SistemaBancario-BancoMaven.git",
     live: null,
   },
   {
@@ -14,13 +14,5 @@ export const projects = [
     image: "/projects/portfolio.png",
     github: "https://github.com/tomzudo",
     live: "https://seu-portfolio.vercel.app",
-  },
-    {
-    title: "Sistema Bancario - BancoMaven",
-    description:
-      "Sistema bancário desenvolvido em Java",
-    image: "/projects/banco-maven.png",
-    github: "https://github.com/tomzudo/SistemaBancario-BancoMaven.git",
-    live: null,
   },
 ];
