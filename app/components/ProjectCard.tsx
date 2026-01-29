@@ -31,7 +31,7 @@ export function ProjectCard({
       "
     >
       {/* IMAGEM */}
-      <div className=" h-80 w-full overflow-hidden">
+      <div className=" relative h-80 w-full overflow-hidden">
         <img
           src={image}
           alt={title}
@@ -44,7 +44,7 @@ export function ProjectCard({
         />
 
         {/* overlay sutil */}
-        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-nome" />
       </div>
 
       {/* CONTEÚDO */}

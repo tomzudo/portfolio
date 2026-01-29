@@ -22,7 +22,7 @@ export const projects: Project[] = [
     description:
       "Sistema bancário desenvolvido em Java, utilizando Maven, com foco no estudo de orientação a objetos, persistência de dados e boas práticas de organização de projetos. O projeto simula operações básicas de um banco, permitindo a manipulação de contas e transações financeiras em um ambiente controlado.",
     image: "/images/bancomaven.png",
-    github: "https://github.com/tomzudo/minha-loja",
+    github: "https://github.com/tomzudo/SistemaBancario-BancoMaven.git",
     live: null,
   },
 ];
