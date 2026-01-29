@@ -1,4 +1,4 @@
-import { projects } from "./data/projects";
+import { projects } from "./data/projects"; 
 import { ProjectCard } from "./components/ProjectCard";
 
 export default function Home() {
@@ -6,8 +6,16 @@ export default function Home() {
     <main className="flex flex-col">
 
       {/* ================= HERO ================= */}
-      <section className="bg-portfolio-hero px-6 py-32">
-        <div className="max-w-6xl mx-auto flex justify-center">
+      <section className="relative bg-portfolio-hero px-6 py-32 overflow-hidden">
+
+        {/* OVERLAY TRANSLÚCIDO */}
+        <div className="absolute inset-0 bg-black/1"></div>
+
+        {/* GRADIENTE SUAVE */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-transparent"></div>
+
+        {/* CONTEÚDO */}
+        <div className="relative z-10 max-w-6xl mx-auto flex justify-center">
           <div
             className="
               w-full max-w-md
@@ -33,7 +41,7 @@ export default function Home() {
 
             <p className="text-white/80 leading-relaxed">
               Desenvolvedor focado em criar aplicações web modernas,
-              com atenção à desorganizacao e uga buga do uga buga do código.
+              com atenção à desorganização e ao código bem estruturado.
             </p>
 
             <div className="flex gap-4 pt-4">
@@ -82,7 +90,6 @@ export default function Home() {
 
           <div className="flex items-center gap-10">
 
-            {/* FOTO */}
             <div className="shrink-0">
               <img
                 src="https://avatars.githubusercontent.com/u/208907254?s=400"
@@ -96,7 +103,6 @@ export default function Home() {
               />
             </div>
 
-            {/* CAIXA PADRONIZADA COM PROJETOS */}
             <div
               className="
                 relative
@@ -110,7 +116,6 @@ export default function Home() {
                 transition-all duration-300
               "
             >
-              {/* SETA LATERAL */}
               <span
                 className="
                   absolute
@@ -126,17 +131,13 @@ export default function Home() {
               <p className="text-portfolio-grayish leading-relaxed">
                 Apaixonado por tecnologia, ingressei na área de desenvolvimento em 2023.
                 Atualmente, curso Análise e Desenvolvimento de Sistemas (ADS) e atuo como
-                estagiário em Backend, aprimorando minhas habilidades tanto para o crescimento
-                profissional quanto pessoal.
+                estagiário em Backend.
               </p>
 
               <p className="text-portfolio-grayish leading-relaxed">
-                Estou sempre em busca de oferecer e proporcionar as melhores experiências
+                Estou sempre em busca de oferecer as melhores experiências
                 em meus projetos e serviços.
               </p>
-
-              {/* STACK */}
-
             </div>
           </div>
         </div>
@@ -159,18 +160,18 @@ export default function Home() {
                 title={project.title}
                 description={project.description}
                 github={project.github}
-                live={project.live}
+                live={project.live} 
+                image={project.image}              
               />
             ))}
           </div>
         </div>
       </section>
 
-            
       {/* ================= FOOTER ================= */}
       <footer className="bg-portfolio-hero py-6 text-center">
         <p className="text-sm text-white/60">
-          2026 ©Desenvolvido por Erivelton Araújo
+          2026 © Desenvolvido por Erivelton Araújo
         </p>
       </footer>
 

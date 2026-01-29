@@ -1,18 +1,28 @@
-export const projects = [
+// app/data/projects.ts
+
+export type Project = {
+  title: string;
+  description: string;
+  image: string;
+  github: string;
+  live?: string | null;
+};
+
+export const projects: Project[] = [
   {
-    title: "Sistema Bancário em Java",
+    title: "Loja virtual",
     description:
-      "Aplicação em Java com operações bancárias, uso de POO, DAO e persistência em SQLite.",
-    image: "/projects/banco.png",
-    github: "https://github.com/tomzudo/SistemaBancario-BancoMaven.git",
+      "Aplicação web next js com rotas e orm.",
+    image: "/images/rotas.png",
+    github: "https://github.com/tomzudo/minha-loja",
     live: null,
   },
   {
-    title: "Portfólio Pessoal",
+    title: "Banco Maven",
     description:
-      "Portfólio desenvolvido com Next.js, TypeScript e Tailwind CSS.",
-    image: "/projects/portfolio.png",
-    github: "https://github.com/tomzudo",
-    live: "https://seu-portfolio.vercel.app",
+      "Sistema bancário desenvolvido em Java, utilizando Maven, com foco no estudo de orientação a objetos, persistência de dados e boas práticas de organização de projetos. O projeto simula operações básicas de um banco, permitindo a manipulação de contas e transações financeiras em um ambiente controlado.",
+    image: "/images/bancomaven.png",
+    github: "https://github.com/tomzudo/minha-loja",
+    live: null,
   },
 ];
