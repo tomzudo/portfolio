@@ -12,7 +12,7 @@ export const projects: Project[] = [
   {
     title: "Loja virtual",
     description:
-      "Aplicação web next js com rotas e orm.",
+      "Loja virtual desenvolvida como uma aplicação web moderna utilizando Next.js, React e TypeScript, com foco em experiência do usuário, performance e responsividade. O projeto simula um e-commerce funcional, organizado para demonstrar competências em desenvolvimento de interfaces, rotas e estado de aplicação, além de práticas de frontend escalável.",
     image: "/images/rotas.png",
     github: "https://github.com/tomzudo/minha-loja",
     live: null,
